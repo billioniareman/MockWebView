@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Choose your task</title>
+    <style>
+        #admin-button {
+            margin: 10px 0;
+            padding: 8px;
+            font-size: 16px;
+        }
+    </style>
 </head>
 <body>
-    <a href="{{ url_for('hrt') }}"><button class="btn-primary">HR and Technical</button></a>
-    <a href="{{ url_for('gd') }}"><button class="btn-primary">Group Discussion</button></a>
+    <a href="{{ url_for('hrt') }}"><button id="admin-button">HR and Technical</button></a>
+    <a href="{{ url_for('gd') }}"><button id="admin-button">Group Discussion</button></a>
 </body>
 </html>
