@@ -5,7 +5,9 @@ from datetime import date, datetime, timedelta
 from dotenv import load_dotenv
 import os
 app = Flask(__name__)
-app.secret_key = 'thisismysecretkey'
+
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+
 load_dotenv()
 firebase_config = {
     "type": os.getenv("FIREBASE_TYPE"),
@@ -259,4 +261,4 @@ def update_gd():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, port=8000)
+    app.run(debug=True)
